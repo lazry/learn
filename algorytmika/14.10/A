@@ -3,14 +3,13 @@ using namespace std;
 int main(){
 	int z = 0;
 	scanf ("%d", &z);
-	int tab[z][3];
 	int t[10][3];
 	int sum[3];
 
 	for(int i = 0; i<z; i++){
 		for(int j = 0; j<10; j++){
 			for(int k = 0; k<3; k++)
-				scanf ("%d", t[j][k]);
+				scanf ("%d", &t[j][k]);
 		}
 		for(int j =0; j <3; j++)
 			sum[j] = 0;
@@ -20,8 +19,10 @@ int main(){
 		}
 		for (int j = 0; j<3; j++)
 			printf("%d ",(sum[j]+5)/10);
+		printf("%s", "\n");
 	}
 }
+
 
 /*
 1
