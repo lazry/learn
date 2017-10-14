@@ -1,0 +1,35 @@
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+
+int main(){
+	// ilosc testow
+	int d = 0; 
+	//ilosc klientow
+	int n = 0;
+	//numerek wylosowany
+	int k = 0;
+	//indeks wygranej kwoty w tablicy
+	int indeks = 0;
+
+	scanf ("%d", &d);
+	
+	for(int i = 0; i<d; i++){
+		scanf ("%d", &n);
+		int kwoty[n]; 
+		scanf ("%d", &k);
+		for(int i = 0; i<n; i++)
+			scanf ("%d", kwoty[n]); 
+		sort(kwoty, kwoty +n);
+		printf("%d/n",kwoty[k]);
+	}
+	return 0;
+}
+
+/*
+2
+53
+34222
+55
+34222
+*/
