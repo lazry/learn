@@ -21,7 +21,7 @@ int main(){
 		for(int i = 0; i<n; i++)
 			scanf ("%d", &kwoty[n]); 
 		sort(kwoty, kwoty + n);
-		printf("%d/n", kwoty[k]);
+		printf("%d\n", kwoty[k]);
 		for(int i = 0; i<n; i++)
 			kwoty[n] = 0;
 	}
