@@ -18,7 +18,7 @@ public:
 };  
 
 stack::stack() { 
-
+ ses = -1;
 }
 
 bool stack::isFull() {   
@@ -36,86 +36,77 @@ bool stack::isEmpty() {
 }
 
 void stack::clear(void) {   
-	for(int i = ses; i > -1; i--)
-		stck[i] = 0;
 	ses = -1;
 }
 
 void stack::push(char el){
-	ses++;
-	stck[ses] = el;
+	if( ses != size-1){
+        ses++;
+	    stck[ses] = el;
+     }
+     //else 
+     //cout<< endl << "Stos jest juz pelny"<<endl;
 }
 void stack::pop() {     
-	 stck[ses]
+	 if( ses != -1)
+         ses--;
+     //else
+         //cout<< endl << "Stos jest juz pusty"<<endl;
 }
 
 char stack::top() {    
-	return ses;
+	return stck[ses];
 }
 
 int main(){
  char elm, plc;
- stack s, ds;
-
-	cout << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-	plc=getche();
-	while (plc!='/'){
-       switch(plc){
-              case 'c': 
-                   s.clear(); 
-                   cout << endl << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-	               plc=getche();
-                   break;
-              case 'p': 
+ char zap;
+ int size3 = size;
+ int size2 = size;
+ stack s, ds, s2;
+ 
+	for(int i = 0; i < size; i++){
                    cout << endl << "Wprowadz element stosu" << endl;
 	               elm=getche();
                    s.push(elm);
-                   cout << endl << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-	               plc=getche();
-                   break;
-              case 'o': 
-                   s.pop();
-                   cout << endl << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-	               plc=getche();
-                   break;
-              case 't':
-                   if (!s.isEmpty()) cout << endl << "Szczytowy element stosu: " << s.top();
-                   else cout << endl << "Nie mozna odczytac wartosci elementu szczytowego. Stos jest pusty!";
-                   cout << endl << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-	               plc=getche();
-                   break;
-              case 'e':
-                   if(s.isEmpty()) cout << endl << "Stos jest pusty!";
-                   else cout << endl << "Stos nie jest pusty!";
-                   cout << endl << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-                   plc=getche();
-                   break;
-              case 'f':
-                   if(s.isFull()) cout << endl << "Stos jest pelny!";
-                   else cout << endl << "Stos nie jest pelny!";
-                   cout << endl << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-                   plc=getche();
-                   break;
-              case 'w':
-                   if(!s.isEmpty()){
-                     cout << endl << "Zawartosc stosu (szczyt stosu u gory)" << endl;
+                   size3++;
+                   }
+                   cout << endl << "Zawartosc stosu 1 (szczyt stosu u gory)" << endl;
                      ds=s;
-					 while(!ds.isEmpty()){
+                     while(!ds.isEmpty()){
 					 	cout << ds.top() << endl;
 					 	ds.pop();
-					 }
-					}
-					else 
-                      cout << endl << "Stos jest pusty!\n";
-					cout << "Wprowadz znak polecenia (c, p, o, t, e, f, w)" << endl;
-                    plc=getche(); 
-                    break;
-              default:
-                   cout << endl << "Wprowadz wlasciwe polecenie (c, p, o, t, e, f, w)" << endl;
-                   plc=getche();      
-                   break;                
-        }    
-     }
+                    }
+                    
+        for(int j = 0; j < size2; j++ ){
+                size3-= 1;
+            for(int i = 0; i<size3; i++){
+                s2.push(s.top()); 
+                s.pop();
+            }
+            zap = s2.top();
+            for(int i = 0; i<size3; i++){
+                s.push(s2.top()); 
+                s2.pop();
+            }
+            s2.push(zap);
+            cout << endl << "Zawartosc stosu 2 (szczyt stosu u gory)" << endl;
+                     ds=s2;
+                     while(!ds.isEmpty()){
+					 	cout << ds.top() << endl;
+					 	ds.pop();
+                    }
+        }
+        s.clear();
+        cout << endl << "Zawartosc stosu 2 (szczyt stosu u gory)" << endl;
+                     ds=s2;
+                     while(!ds.isEmpty()){
+					 	cout << ds.top() << endl;
+					 	ds.pop();
+                    }
+        
+        
+     
 getche();     
 return 0;	
 }     
