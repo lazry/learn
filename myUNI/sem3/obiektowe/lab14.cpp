@@ -1,4 +1,6 @@
-/*#include<iostream>
+/* program wczytuje tekst i pozwala wyszukac uzytkownikowi wszystkie wiersze,
+	w ktorych znajduje sie jego wybrane slowo/zdanie */
+#include<iostream>
 #include<string>
 #include <fstream>
 
@@ -45,4 +47,4 @@ int main()
 		cin >> wyszukaj;
 		t.wyszukaj(wyszukaj);
 	}
-}*/
+}
