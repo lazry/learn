@@ -4,11 +4,11 @@
 #include <vector>
 #define SIZE 10
 /*
-•	wczytania z klawiatury nazw 10 miast,
-•	posortowania utworzonej listy nazw,
-•	wy?wietlenia zawarto?ci kontenera,
-•	odwrócenia kolejno?ci elementów kontenera,
-•	wy?wietlenia zawarto?ci kontenera.
+â€¢	wczytania z klawiatury nazw 10 miast,
+â€¢	posortowania utworzonej listy nazw,
+â€¢	wy?wietlenia zawarto?ci kontenera,
+â€¢	odwrÃ³cenia kolejno?ci elementÃ³w kontenera,
+â€¢	wy?wietlenia zawarto?ci kontenera.
 
 using namespace std;
 
