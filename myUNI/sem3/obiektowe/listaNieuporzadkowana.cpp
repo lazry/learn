@@ -1,5 +1,4 @@
-﻿/*	LAB 4-5 - oddany
-Dokończyć program ListaN.cpp, tworzący nieuporządkowaną listę jednokierunkową, zawierającą wprowadzane 
+﻿/* Program ListaN.cpp, tworzący nieuporządkowaną listę jednokierunkową, zawierającą wprowadzane 
 z klawiatury znaki(wartości typu char).Końcem tworzenia listy jest znak ’ / ’.
 Zilustrować działanie poszczególnych metod w bloku main() programu(np.zgodnie z podanym przykładem).
 *//*
