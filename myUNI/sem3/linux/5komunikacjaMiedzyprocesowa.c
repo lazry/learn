@@ -9,7 +9,7 @@
 ● Proces trzeci wyświetla wynik potęgowania na ekranie
   (opcjonalnie – zapisuje wyniki do pliku wynikowego (zbiorczego,
   kolejne wyniki w kolejnych liniach)).*/
-  #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
