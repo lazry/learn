@@ -1,7 +1,7 @@
 ﻿/*1.	Napisać program realizujący obiektową implementację generowania wszystkich 
 anagramów słowa wczytanego z klawiatury, przy czym anagram jest wyrazem utworzonym przez dowolne przestawienie 
 liter w wyrazie wejściowym. Zadanie rozwiązać bez wykorzystywania biblioteki STL (chyba, że do implementacji stosu). 
-Zilustrować działanie programu w bloku main(). 
+Zilustrować działanie programu w bloku main(). */
 
 #include <string>
 #include <iostream>
@@ -66,4 +66,4 @@ int main()
 	system("pause");
 
 	return 0;
-}*/
+}
