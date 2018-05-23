@@ -1,4 +1,5 @@
-/*	 ODDANE
+/*	 pierwsza czesc zamienia liczbe dziesietna na binarna, a druga oblicza dzialanie zapisane 
+	 w Odwrtonej Notacji Polskiej */
 #include <string>
 #include <iostream>
 #include <algorithm>
